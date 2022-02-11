@@ -2,7 +2,8 @@
 $search = $_GET['search'] ?? '';
 $limit = 50;
 $offset = $_GET['offset'] ?? 0;
-$data = json_decode(file_get_contents("https://data.gov.lv/dati/lv/api/3/action/datastore_search?q={$search}&offset={$offset}&resource_id=25e80bf3-f107-4ab4-89ef-251b5b9374e9&limit={$limit}"));
+$data = json_decode(file_get_contents(
+        "https://data.gov.lv/dati/lv/api/3/action/datastore_search?q={$search}&offset={$offset}&resource_id=25e80bf3-f107-4ab4-89ef-251b5b9374e9&limit={$limit}"));
 //echo '<pre>';
 //var_dump($data);die;
 $results = [];
